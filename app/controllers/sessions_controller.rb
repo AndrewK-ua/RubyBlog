@@ -9,8 +9,8 @@ class SessionsController < ApplicationController
 			session[:user_name] = user.email
 			redirect_to home_path
 		else
-			flash[:login_errors] = ['invalid credentionals']
-			render 'new'
+			flash[:login_errors] = ['Invalid credentionals']
+			redirect_to login_path
 		end
 
 	end
